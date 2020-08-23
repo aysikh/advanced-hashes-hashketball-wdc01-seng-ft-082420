@@ -203,7 +203,6 @@ def player_stats(player) #Only wants Jeff Adrien, always check via pry to see wh
 end
 
 def big_shoe_rebounds #biggest sheo size is 19 and that person has 11 rebounds
-<<<<<<< HEAD
    biggest_shoe = 0
    most_rebounds = 0
     game_hash.each do |team, team_info|
@@ -211,7 +210,7 @@ def big_shoe_rebounds #biggest sheo size is 19 and that person has 11 rebounds
       #binding.pry
       if biggest_shoe < player_stats[:shoe]
         #I didn't need the && most_rebounds < player_stats[:rebounds] because I just
-        #need to figure out which player has the largest shoe size and from there I can find out their rebounds 
+        #need to figure out which player has the largest shoe size and from there I can find out their rebounds
         most_rebounds = player_stats[:rebounds]
         biggest_shoe = player_stats[:shoe]
 #        binding.pry
@@ -219,19 +218,4 @@ def big_shoe_rebounds #biggest sheo size is 19 and that person has 11 rebounds
     end
 end
 most_rebounds
-=======
-  # biggest_shoe = 0
-  # most_rebounds = 0
-    game_hash.each do |team, team_info|
-        team_info[:players].each do |player_stats|
-      #binding.pry
-      biggest_shoe = player_stats[:shoe]
-      most_rebounds = player_stats[:rebounds]
-      #binding.pry
-      if biggest_shoe > player_stats[:rebounds]
-        return most_rebounds
-      end
-  end
-end
->>>>>>> d18e725aaa81a6d61480b62615f2e8185b3a473a
 end
